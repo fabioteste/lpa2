@@ -1,0 +1,8 @@
+C:\Users\fabio_h5qbe\documents\visual studio 2017\Projects\LPA2\LPA2.Console\bin\Debug\LPA2.Console.exe.config
+C:\Users\fabio_h5qbe\documents\visual studio 2017\Projects\LPA2\LPA2.Console\bin\Debug\LPA2.Console.exe
+C:\Users\fabio_h5qbe\documents\visual studio 2017\Projects\LPA2\LPA2.Console\bin\Debug\LPA2.Console.pdb
+C:\Users\fabio_h5qbe\documents\visual studio 2017\Projects\LPA2\LPA2.Console\bin\Debug\LPA2.Domain.dll
+C:\Users\fabio_h5qbe\documents\visual studio 2017\Projects\LPA2\LPA2.Console\bin\Debug\LPA2.Domain.pdb
+C:\Users\fabio_h5qbe\documents\visual studio 2017\Projects\LPA2\LPA2.Console\obj\Debug\LPA2.Console.csprojResolveAssemblyReference.cache
+C:\Users\fabio_h5qbe\documents\visual studio 2017\Projects\LPA2\LPA2.Console\obj\Debug\LPA2.Console.exe
+C:\Users\fabio_h5qbe\documents\visual studio 2017\Projects\LPA2\LPA2.Console\obj\Debug\LPA2.Console.pdb

@@ -1,0 +1,5 @@
+C:\Users\fabio_h5qbe\documents\visual studio 2017\Projects\LPA2\LPA2.Domain\bin\Debug\LPA2.Domain.dll
+C:\Users\fabio_h5qbe\documents\visual studio 2017\Projects\LPA2\LPA2.Domain\bin\Debug\LPA2.Domain.pdb
+C:\Users\fabio_h5qbe\documents\visual studio 2017\Projects\LPA2\LPA2.Domain\obj\Debug\LPA2.Domain.csprojResolveAssemblyReference.cache
+C:\Users\fabio_h5qbe\documents\visual studio 2017\Projects\LPA2\LPA2.Domain\obj\Debug\LPA2.Domain.dll
+C:\Users\fabio_h5qbe\documents\visual studio 2017\Projects\LPA2\LPA2.Domain\obj\Debug\LPA2.Domain.pdb

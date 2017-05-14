@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentValidator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidator.1.0.5\lib\net461\FluentValidator.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,11 +50,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LPA2.Domain\LPA2.Domain.csproj">
       <Project>{d1796181-0694-43f1-be04-c942591096d0}</Project>
       <Name>LPA2.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LPA2.Shared\LPA2.Shared.csproj">
+      <Project>{749e0196-0cb5-4230-bebf-601b09b1d86b}</Project>
+      <Name>LPA2.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

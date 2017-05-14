@@ -11,6 +11,14 @@ namespace LPA2
             var customer = new Customer("Fabio", "Rezende", "fabio.rezende@gmail.com", user);
             //customer.FirstName = "Arlindo";
             customer.User.Activate();
+
+            if (!customer.IsValid())
+            {
+                foreach (var notification in customer.Notifications)
+                {
+                    Console.WriteLine(notification.Message);
+                }
+            }
             Console.WriteLine(customer.ToString());
             Console.ReadKey();
         }
