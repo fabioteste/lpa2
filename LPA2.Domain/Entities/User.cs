@@ -9,7 +9,7 @@ namespace LPA2.Domain.Entities
             Id = Guid.NewGuid();
             Username = username;
             Password = password;
-            Active = false;
+            Active = true;
         }
 
         public Guid Id { get; private set; }
