@@ -12,7 +12,10 @@ namespace LPA2.Domain.Entities
             Price = Product.Price;
 
             new ValidationContract<OrderItem>(this)
-                .IsGreaterThan(x => x.Quantity, 1);
+                .IsGreaterThan(x => x.Quantity, 1)
+                .IsGreaterThan(x => x.Product.QuantityOnHand, Quantity + 1, $"Temos apenas {product.QuantityOnHand} de {product.Title} em estoque");
+
+            Product.DecreaseQuantity(quantity);
         }
 
         public Product Product { get; private set; }
