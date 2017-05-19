@@ -22,7 +22,7 @@ namespace LPA2.Domain.Entities
             _items = new List<OrderItem>();
 
             new ValidationContract<Order>(this)
-                .IsGreaterThan(x => x.DeliveryFee, -1)
+                .IsGreaterThan(x => x.Discount, -1)
                 .IsGreaterThan(x => x.DeliveryFee, 0);
         }
 
