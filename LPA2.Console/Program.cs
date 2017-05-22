@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using LPA2.Domain.Commands;
+using LPA2.Domain.CommandsHandler;
 using LPA2.Domain.Entities;
 using LPA2.Domain.Repositories;
 using LPA2.Domain.ValueObjects;
@@ -10,14 +12,26 @@ namespace LPA2
     {
         static void Main(string[] args)
         {
+            var command = new RegisterOrderCommand
+            {
+                Customer = Guid.NewGuid(),
+                DeliveryFee = 9,
+                Discount = 30,
+                Items = new List<RegisterOrderItemCommand>
+                {
+                    new RegisterOrderItemCommand
+                    {
+                        Product = Guid.NewGuid(),
+                        Quantity = 3
+                    }
+                }
+                
+            };
             generateOrder(
                 new FakeCustomerRepository(), 
-                new FakeProductRepository(), 
-                new Guid(),
-                new Dictionary<Guid, int> {{Guid.NewGuid(), 5}},
-                10,
-                20
-                );
+                new FakeProductRepository(),
+                new FakeOrderRepository(), 
+                command);
             Console.ReadKey();
 
 
@@ -26,27 +40,19 @@ namespace LPA2
         public static void generateOrder(
             ICustomerRepository customerRepository,
             IProductRepository productRepository,
-            Guid userId, 
-            IDictionary<Guid, int> items,
-            decimal deliveryFee,
-            decimal discount)
+            IOrderRepository orderRepository,
+            RegisterOrderCommand command)
         {
-            var customer = customerRepository.GetByUserId(userId);
-            var order = new Order(customer, deliveryFee, discount);
-            foreach (var item in items)
-            {
-                var product = productRepository.Get(item.Key);
-                order.AddItem(new OrderItem(product, item.Value));
+            var handler = new OrderCommandHandler(
+                customerRepository, 
+                productRepository, 
+                orderRepository);    
+            handler.Handle(command);
 
-            }
-            
-            Console.WriteLine($"Número do pedido: { order.Number}");
-            Console.WriteLine($"Data: {order.CreateDate: dd/MM/yyyy}");
-            Console.WriteLine($"Desconto: {order.Discount}");
-            Console.WriteLine($"Taxa de Entrega: {order.DeliveryFee}");
-            Console.WriteLine($"Sub Total: {order.Subtotal()}");
-            Console.WriteLine($"Total: {order.Total()}");
-            Console.WriteLine($"Cliente: {order.Customer.Name.ToString()}");
+            if(handler.IsValid())
+                Console.WriteLine("Pedido cadastrado com sucesso!");
+
+
 
         }
     }
@@ -73,6 +79,14 @@ namespace LPA2
                 new Email("fabio.rezende@gmail.com"),
                 new Document("26648030348"),
                 new User("fabiorezende", "senha") );
+        }
+    }
+
+    public class FakeOrderRepository : IOrderRepository
+    {
+        public void Save(Order order)
+        {
+            
         }
     }
 }
