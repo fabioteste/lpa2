@@ -9,5 +9,10 @@ namespace LPA2.Domain.Repositories
 
         Customer GetByUserId(Guid id);
 
+        void Update(Customer customer);
+
+        bool DocumentExists(string document);
+
+        void Save(Customer customer);
     }
 }
