@@ -4,6 +4,7 @@ namespace LPA2.Domain.ValueObjects
 {
     public class Name : Notifiable
     {
+        protected Name() { }
         public Name(string firstName, string lastName)
         {
             FirstName = firstName;
