@@ -51,9 +51,9 @@
     <Compile Include="Mappings\OrderMap.cs" />
     <Compile Include="Mappings\ProductMap.cs" />
     <Compile Include="Mappings\UserMap.cs" />
-    <Compile Include="Migrations\201705270059141_v1.cs" />
-    <Compile Include="Migrations\201705270059141_v1.Designer.cs">
-      <DependentUpon>201705270059141_v1.cs</DependentUpon>
+    <Compile Include="Migrations\201705311610435_v1.cs" />
+    <Compile Include="Migrations\201705311610435_v1.Designer.cs">
+      <DependentUpon>201705311610435_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,8 +73,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705270059141_v1.resx">
-      <DependentUpon>201705270059141_v1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705311610435_v1.resx">
+      <DependentUpon>201705311610435_v1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

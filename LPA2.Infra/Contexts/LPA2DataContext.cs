@@ -6,7 +6,7 @@ namespace LPA2.Infra.Contexts
 {
     public class LPA2DataContext : DbContext
     {
-        public LPA2DataContext() : base(@"Server=.\sqlexpress;Database=LPA2;Database=LPA2; User ID=sa; Password=sqlexpress;")
+        public LPA2DataContext() : base(@"Server=DORMAMU;Database=LPA2; User ID=sa; Password=sqlexpress;")
         {
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;
