@@ -5,6 +5,7 @@ namespace LPA2.Domain.ValueObjects
     public class Document : Notifiable
     {
         protected Document() { }
+
         public Document(string number)
         {
             Number = number;
