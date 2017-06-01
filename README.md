@@ -10,3 +10,4 @@
 - [Entity Framework](https://www.nuget.org/packages/EntityFramework)
 - [Fluent Validator](https://www.nuget.org/packages/FluentValidator.Core/)
 - [SQL Server Express](https://www.microsoft.com/pt-br/sql-server/sql-server-editions-express)
+- [Dapper](https://www.nuget.org/packages/Dapper)
