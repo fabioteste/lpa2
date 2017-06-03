@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LPA2.Domain", "LPA2.Domain\LPA2.Domain.csproj", "{D1796181-0694-43F1-BE04-C942591096D0}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{6D7ED07E-EDCB-475F-BACE-EB4249FA21F9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infra", "3 - Infra", "{E353CD49-B3BA-46AB-AE14-011ECD1D3B9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LPA2.Api", "LPA2.Api\LPA2.Api.csproj", "{2DD2BAF8-311C-41CA-B2CB-7BFA8EBA7511}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{C8B6EF42-F0BE-4989-BC53-38E3DB15FD23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8B6EF42-F0BE-4989-BC53-38E3DB15FD23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8B6EF42-F0BE-4989-BC53-38E3DB15FD23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DD2BAF8-311C-41CA-B2CB-7BFA8EBA7511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DD2BAF8-311C-41CA-B2CB-7BFA8EBA7511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DD2BAF8-311C-41CA-B2CB-7BFA8EBA7511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DD2BAF8-311C-41CA-B2CB-7BFA8EBA7511}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,5 +54,6 @@ Global
 		{749E0196-0CB5-4230-BEBF-601B09B1D86B} = {6D7ED07E-EDCB-475F-BACE-EB4249FA21F9}
 		{A7395D5D-C5D1-4123-919A-980A408065E3} = {6D7ED07E-EDCB-475F-BACE-EB4249FA21F9}
 		{C8B6EF42-F0BE-4989-BC53-38E3DB15FD23} = {E353CD49-B3BA-46AB-AE14-011ECD1D3B9A}
+		{2DD2BAF8-311C-41CA-B2CB-7BFA8EBA7511} = {1107AC16-6228-4DAE-8A6F-11678B3A8EA4}
 	EndGlobalSection
 EndGlobal

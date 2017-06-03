@@ -12,10 +12,10 @@ namespace LPA2.Domain.Commands.Handlers
 {
     public class CustomerCommandHandler : Notifiable, ICommandHandler<RegisterCustomerCommand>
     {
-        private readonly ICustomerRepository _customerRepository;
+        private readonly CustomerHandler _customerRepository;
         private readonly IEmailService _emailService;
 
-        public CustomerCommandHandler(ICustomerRepository customerRepository, IEmailService emailService)
+        public CustomerCommandHandler(CustomerHandler customerRepository, IEmailService emailService)
         {
             _customerRepository = customerRepository;
             _emailService = emailService;
@@ -44,9 +44,11 @@ namespace LPA2.Domain.Commands.Handlers
             AddNotifications(user.Notifications);
             AddNotifications(customer.Notifications);
 
+            if (!IsValid())
+                return null;
+
             //4 Inserir no banco
-            if (IsValid())
-                _customerRepository.Save(customer);
+            _customerRepository.Save(customer);
 
             //5 Enviar email de boas vindas
             _emailService.Send(

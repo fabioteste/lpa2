@@ -10,7 +10,7 @@ using Dapper;
 
 namespace LPA2.Infra.Repositories
 {
-    public class CustomerRepository : ICustomerRepository
+    public class CustomerRepository : CustomerHandler
     {
         private readonly LPA2DataContext _context;
 

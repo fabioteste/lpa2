@@ -61,7 +61,7 @@ namespace LPA2.Domain.Resources {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a &lt;h1&gt;Bem vindo &lt;strong&gt;{1}&lt;/strong&gt;&lt;/h1&gt;.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a &lt;h1&gt;Bem vindo &lt;strong&gt;{0}&lt;/strong&gt;&lt;/h1&gt;.
         /// </summary>
         public static string WelcomeEmailBody {
             get {
@@ -70,7 +70,7 @@ namespace LPA2.Domain.Resources {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Bem vindo, {1}.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Bem vindo, {0}.
         /// </summary>
         public static string WelcomeEmailTitle {
             get {

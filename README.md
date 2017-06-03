@@ -11,3 +11,4 @@
 - [Fluent Validator](https://www.nuget.org/packages/FluentValidator.Core/)
 - [SQL Server Express](https://www.microsoft.com/pt-br/sql-server/sql-server-editions-express)
 - [Dapper](https://www.nuget.org/packages/Dapper)
+- [Mvc AspNetCore](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Core/)

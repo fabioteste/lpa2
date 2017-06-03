@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexts\LPA2DataContext.cs" />
+    <Compile Include="EmailService.cs" />
     <Compile Include="Mappings\CustomerMap.cs" />
     <Compile Include="Mappings\OrderItemMap.cs" />
     <Compile Include="Mappings\OrderMap.cs" />
