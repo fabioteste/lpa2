@@ -12,10 +12,10 @@ namespace LPA2.Domain.Commands.Handlers
 {
     public class CustomerCommandHandler : Notifiable, ICommandHandler<RegisterCustomerCommand>
     {
-        private readonly CustomerHandler _customerRepository;
+        private readonly ICustomerRepository _customerRepository;
         private readonly IEmailService _emailService;
 
-        public CustomerCommandHandler(CustomerHandler customerRepository, IEmailService emailService)
+        public CustomerCommandHandler(ICustomerRepository customerRepository, IEmailService emailService)
         {
             _customerRepository = customerRepository;
             _emailService = emailService;

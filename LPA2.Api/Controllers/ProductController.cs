@@ -1,4 +1,5 @@
 ﻿using LPA2.Domain.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LPA2.Api.Controllers
@@ -14,6 +15,8 @@ namespace LPA2.Api.Controllers
 
         [HttpGet]
         [Route("v1/products")]
+        [AllowAnonymous]
+
         public IActionResult Get()
         {
             return Ok(_repository.Get());

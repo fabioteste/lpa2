@@ -10,7 +10,7 @@ using Dapper;
 
 namespace LPA2.Infra.Repositories
 {
-    public class CustomerRepository : CustomerHandler
+    public class CustomerRepository : ICustomerRepository
     {
         private readonly LPA2DataContext _context;
 
@@ -25,6 +25,15 @@ namespace LPA2.Infra.Repositories
                 .Customers
                 .Include(x => x.User)
                 .FirstOrDefault(x => x.Id == id);
+        }
+
+        public Customer GetByUsername(string username)
+        {
+            return _context
+                .Customers
+                .Include(x => x.User)
+                .AsNoTracking()
+                .FirstOrDefault(x => x.User.Username == username);
         }
 
         public bool DocumentExists(string document)
@@ -63,7 +72,7 @@ namespace LPA2.Infra.Repositories
             {
                 conn.Open();
                 return conn
-                    .Query<GetProductListCommandResult>(query, 
+                    .Query<GetProductListCommandResult>(query,
                     new { username = username })
                     .FirstOrDefault();
 

@@ -4,6 +4,7 @@ using LPA2.Domain.Repositories;
 using LPA2.Infra.Transactions;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LPA2.Api.Controllers
 {
@@ -19,6 +20,7 @@ namespace LPA2.Api.Controllers
 
         [HttpPost]
         [Route("v1/customers")]
+        [AllowAnonymous]
         public async Task<IActionResult> Post([FromBody]RegisterCustomerCommand command)
         {
             var result = _handler.Handle(command);

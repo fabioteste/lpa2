@@ -9,11 +9,11 @@ namespace LPA2.Domain.Commands.Handlers
 {
     public class OrderCommandHandler : Notifiable, ICommandHandler<RegisterOrderCommand>
     {
-        private readonly CustomerHandler _customerRepository;
+        private readonly ICustomerRepository _customerRepository;
         private readonly IProductRepository _productRepository;
         private readonly IOrderRepository _orderRepository;
 
-        public OrderCommandHandler(CustomerHandler customerRepository, IProductRepository productRepository, IOrderRepository orderRepository)
+        public OrderCommandHandler(ICustomerRepository customerRepository, IProductRepository productRepository, IOrderRepository orderRepository)
         {
             _customerRepository = customerRepository;
             _productRepository = productRepository;
